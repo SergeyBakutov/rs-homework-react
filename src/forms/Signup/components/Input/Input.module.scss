@@ -1,0 +1,179 @@
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.asterix {
+  color: red;
+}
+
+.description {
+  font-size: 0.875em;
+  color: #868e96;
+}
+
+.input-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  transition: border-color 100ms ease 0s;
+
+  &_default {
+    border: 1px solid rgb(206, 212, 218);
+  }
+
+  &_filled {
+    background-color: rgb(241, 243, 245);
+
+    .input {
+      background-color: rgb(241, 243, 245);
+    }
+  }
+
+  &_unstyled {
+    border-radius: 0px;
+    padding: 0;
+  }
+
+  &_default:focus-within, &_filled:focus-within {
+    border: 1px solid rgb(34, 139, 230);
+  }
+
+  &_error {
+    border: 1px solid #fa5252;
+  }
+
+  &_disabled {
+    background-color: rgb(241, 243, 245);
+  }
+
+  &_radius-xs:not(&_unstyled) {
+    border-radius: 2px;
+  }
+
+  &_radius-sm:not(&_unstyled) {
+    border-radius: 4px;
+  }
+
+  &_radius-md:not(&_unstyled) {
+    border-radius: 8px;
+  }
+
+  &_radius-lg:not(&_unstyled) {
+    border-radius: 16px;
+  }
+
+  &_radius-xl:not(&_unstyled) {
+    border-radius: 32px;
+  }
+  
+}
+
+.icon {
+  color:#adb5bd;
+  cursor: default;
+}
+
+.input {
+  width: 100%;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  appearance: none;
+
+  &_error {
+    color: #fa5252;
+  }
+
+  &_error::placeholder {
+    color: #fa5252;
+  }
+}
+
+.error {
+  font-size: 14px;
+  color: #fa5252;
+}
+
+.wrapper-xs {
+  font-size: 12px;
+  line-height: 20px;
+
+  .description, .error {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  .input-wrapper {
+    gap: 10px;
+    padding: 1px 10px;
+    height: 30px;
+  }
+}
+
+.wrapper-sm {
+  font-size: 14px;
+  line-height: 22px;
+
+  .description, .error {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .input-wrapper {
+    gap: 12px;
+    padding: 1px 12px;
+    height: 36px;
+  }
+}
+
+.wrapper-md {
+  font-size: 16px;
+  line-height: 24px;
+
+  .description, .error {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .input-wrapper {
+    gap: 14px;
+    padding: 1px 14px;
+    height: 42px;
+  }
+}
+
+.wrapper-lg {
+  font-size: 18px;
+  line-height: 26px;
+
+  .description, .error {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .input-wrapper {
+    gap: 16.5px;
+    padding: 1px 16.5px;
+    height: 50px;
+  }
+}
+
+.wrapper-xl {
+  font-size: 20px;
+  line-height: 28px;
+
+  .description, .error {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .input-wrapper {
+    gap: 20px;
+    padding: 1px 20px;
+    height: 60px;
+  }
+}
