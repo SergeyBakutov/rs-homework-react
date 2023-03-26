@@ -1,0 +1,12 @@
+.sortedWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.charactersList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 30px;
+}
