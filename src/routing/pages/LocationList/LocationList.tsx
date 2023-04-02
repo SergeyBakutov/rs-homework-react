@@ -7,13 +7,13 @@ import cls from './LocationList.module.css'
 export const LocationList: React.FC = () => {
   return (
     <>
-      <h1>Location list</h1>
+      <h2>Location list</h2>
       <ol className={cls.locationList} type="1">
         {locations.map((location) => {
-          const {id, name, created} = location
+          const { id, name, created } = location
           return (
             <li key={created}>
-              <Link to={`/locations/${id}`} state={location}>{name}</Link>
+              <Link to={`./${id}`} state={location}>{name}</Link>
             </li>
           )
         })}

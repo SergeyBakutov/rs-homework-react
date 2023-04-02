@@ -26,24 +26,22 @@ export const CharacterList: React.FC = () => {
 
   const onChangeHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchParams({ created: e.target.value })
-  },[setSearchParams])
+  }, [setSearchParams])
 
   return (
     <>
-      <h1>Character list</h1>
-      <p className={cls.sortedWrapper}>
-        Sort by created:
+      <h2>Character list (
         <span>&uarr;</span>
-        <input type="radio" name="created" value="ASC" checked={created === "ASC"} onChange={onChangeHandler} />
+        <input type="radio" name="created" value="ASC" checked={created === "ASC"} onChange={onChangeHandler} />&nbsp;
         <span>&darr;</span>
-        <input type="radio" name="created" value="DESC" checked={created === "DESC"} onChange={onChangeHandler} />
-      </p>
+        <input type="radio" name="created" value="DESC" checked={created === "DESC"} onChange={onChangeHandler} />)
+      </h2>
       <ol className={cls.charactersList} type="1">
         {characters.sort(sortByCreated).map((character) => {
-          const {id, name, created} = character
+          const { id, name, created } = character
           return (
             <li key={created}>
-              <Link to={`/characters/${id}`} state={character}>{name}</Link>
+              <Link to={`./${id}`} state={character}>{name}</Link>
             </li>
           )
         })}

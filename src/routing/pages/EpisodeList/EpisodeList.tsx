@@ -7,13 +7,13 @@ import cls from './EpisodeList.module.css'
 export const EpisodeList: React.FC = () => {
   return (
     <>
-      <h1>Episode list</h1>
+      <h2>Episode list</h2>
       <ol className={cls.episodeList} type="1">
         {episodes.map((episode) => {
           const { id, name, created } = episode
           return (
             <li key={created}>
-              <Link to={`/episodes/${id}`} state={episode}>{name}</Link>
+              <Link to={`./${id}`} state={episode}>{name}</Link>
             </li>
           )
         })}
