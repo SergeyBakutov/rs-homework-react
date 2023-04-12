@@ -4,3 +4,17 @@
   gap: 10px;
   padding: 10px 30px;
 }
+
+.loading {
+  padding: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  color: darkgreen;
+}
+
+.error {
+  padding: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  color: darkred;
+}

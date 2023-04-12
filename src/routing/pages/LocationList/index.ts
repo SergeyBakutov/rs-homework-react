@@ -1,1 +1,1 @@
-export { LocationList } from './LocationList'
+export { LocationListLazy as LocationList } from './LocationListLazy'

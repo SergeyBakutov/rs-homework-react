@@ -1,1 +1,1 @@
-export { CharacterList } from './СharacterList'
+export { CharacterListLazy as CharacterList } from './CharacterListLazy'

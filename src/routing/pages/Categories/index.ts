@@ -1,1 +1,1 @@
-export { Categories } from './Categories'
+export { CategoriesLazy as Categories } from './CategoriesLazy'

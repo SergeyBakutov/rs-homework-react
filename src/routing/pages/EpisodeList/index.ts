@@ -1,1 +1,1 @@
-export { EpisodeList } from './EpisodeList'
+export { EpisodeListLazy as EpisodeList } from './EpisodeListLazy'
